@@ -6,15 +6,17 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build",
+		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.9.4",
 		"@astrojs/starlight": "^0.28.3",
 		"astro": "^4.15.3",
 		"expressive-code-color-chips": "*",
 		"sharp": "^0.32.5",
-		"starlight-package-managers": "^0.7.0"
+		"starlight-package-managers": "^0.7.0",
+		"typescript": "^5.6.3"
 	}
 }
