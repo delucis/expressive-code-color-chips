@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://delucis.github.io',
+	base: '/expressive-code-color-chips',
 	integrations: [
 		starlight({
 			title: 'Expressive Code Color Chips',
