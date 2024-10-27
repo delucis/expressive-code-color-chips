@@ -1,5 +1,11 @@
 # expressive-code-color-chips
 
+## 0.1.1
+
+### Patch Changes
+
+- [`8cb8982`](https://github.com/delucis/expressive-code-color-chips/commit/8cb89821731d98ecaa6d5fffc91963b506f68edb) Thanks [@delucis](https://github.com/delucis)! - Avoids annotating named colors inside CSS comments as this can lead to false positives
+
 ## 0.1.0
 
 ### Minor Changes
