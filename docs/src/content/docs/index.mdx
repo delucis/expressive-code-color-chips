@@ -1,0 +1,59 @@
+---
+title: Expressive Code Color Chips
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: A plugin to add color previews to your CSS code examples
+  image:
+    html: 🎨
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+    - text: Star on GitHub
+      link: https://github.com/delucis/expressive-code-color-chips
+      icon: star
+      variant: minimal
+head:
+  - tag: style
+    content: >-
+      .hero-html {
+        --size: 10rem;
+        --blur: calc(var(--size) / 3);
+        --x-shift: calc(var(--size) / 3);
+        --y-shift: calc(var(--size) / 5);
+        font-size: var(--size);
+        line-height: var(--size);
+        justify-content: center;
+        filter:
+          drop-shadow(0 0 var(--hero-core-blur, 0) var(--sl-color-blue-high))
+          drop-shadow(0 0 var(--blur) var(--sl-color-blue))
+          drop-shadow(calc(-1 * var(--x-shift)) var(--y-shift) var(--blur) var(--sl-color-purple))
+          drop-shadow(var(--x-shift) calc(-1 * var(--y-shift)) var(--blur) var(--sl-color-green));
+        z-index: -1;
+      }
+      [data-theme="dark"] .hero-html { --hero-core-blur: calc(var(--size) / 10) }
+      [data-has-hero] header {
+        border-color: transparent;
+        background-color: transparent;
+        backdrop-filter: blur(1rem);
+      }
+      .hero h1 { text-wrap: balance }
+---
+
+```css title="example.css"
+.chips {
+	/* CSS named colors */
+	color: red;
+	/* Hexadecimal colors */
+	background-color: #fff;
+	/* HSL color functions */
+	border-color: hsl(0, 0%, 0%);
+	/* System colors */
+	outline-color: SelectedItem;
+	/* Transparent colors */
+	background: linear-gradient(rgba(0, 0, 255, 0.25), rgba(0, 0, 255, 0.75));
+	/* And more… */
+	--more: oklch(70% 0.1 72);
+}
+```

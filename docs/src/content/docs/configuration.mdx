@@ -1,0 +1,63 @@
+---
+title: Configuration
+description: Optional configuration for the Expressive Code Color Chips plugin, including how to customize styling.
+---
+
+After adding the Color Chips plugin to your Expressive Code config as shown in [the set-up guide](/getting-started/), no further configuration is required.
+
+If you want to customize the appearance of the color chips, you can use style overrides.
+
+## Styling
+
+You can provide custom styles in your Expressive Code config using the `styleOverrides.colorChips` object.
+
+For example, to display square chips instead of the default round style, set `borderRadius` to zero:
+
+```js
+{
+	plugins: [pluginColorChips()],
+	styleOverrides: {
+		colorChips: {
+			borderRadius: 0,
+		},
+	},
+},
+```
+
+## Available style overrides
+
+### `size`
+
+**Default:** `"1.2em"`
+
+The size of each color chip.
+
+### `borderWidth`
+
+**Default:** `"1px"`
+
+The width of the border around each color chip.
+
+### `borderRadius`
+
+**Default:** `"50%"`
+
+The roundness of each color chip.
+
+### `borderColor`
+
+**Default:** `({ theme }) => theme.fg`
+
+The color of the border around each chip.
+
+### `transparencyShadeOne`
+
+**Default:** `["#777", "#fff"]`
+
+The first of two shades used in the checkerboard background for transparent colors.
+
+### `transparencyShadeTwo`
+
+**Default:** `["#000", "#bbb"]`
+
+The second of two shades used in the checkerboard background for transparent colors.

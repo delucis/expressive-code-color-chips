@@ -1,0 +1,19 @@
+{
+	"include": ["src/**/*.ts"],
+	"compilerOptions": {
+		"allowJs": true,
+		"declaration": true,
+		"declarationMap": true,
+		"emitDeclarationOnly": true,
+		"esModuleInterop": true,
+		"exactOptionalPropertyTypes": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"target": "ESNext",
+		"outDir": "./dist"
+	}
+}
