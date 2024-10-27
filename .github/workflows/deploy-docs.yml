@@ -18,14 +18,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site output
-        uses: withastro/action@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
-          path: ./docs
           node-version: 20
-          package-manager: pnpm
+          cache: pnpm
+      - run: pnpm i
+      - run: pnpm build
+      - run: pnpm build:docs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/dist/
 
   deploy:
     needs: build
