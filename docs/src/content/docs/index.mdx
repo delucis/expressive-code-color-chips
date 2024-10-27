@@ -18,21 +18,19 @@ head:
   - tag: style
     content: >-
       .hero-html {
-        --size: 10rem;
-        --blur: calc(var(--size) / 3);
+        --size: min(10rem, calc(5rem + 6vw));
+        --blur: calc(var(--size) / 3.5);
         --x-shift: calc(var(--size) / 3);
         --y-shift: calc(var(--size) / 5);
         font-size: var(--size);
         line-height: var(--size);
         justify-content: center;
         filter:
-          drop-shadow(0 0 var(--hero-core-blur, 0) var(--sl-color-blue-high))
           drop-shadow(0 0 var(--blur) var(--sl-color-blue))
           drop-shadow(calc(-1 * var(--x-shift)) var(--y-shift) var(--blur) var(--sl-color-purple))
           drop-shadow(var(--x-shift) calc(-1 * var(--y-shift)) var(--blur) var(--sl-color-green));
         z-index: -1;
       }
-      [data-theme="dark"] .hero-html { --hero-core-blur: calc(var(--size) / 10) }
       [data-has-hero] header {
         border-color: transparent;
         background-color: transparent;
