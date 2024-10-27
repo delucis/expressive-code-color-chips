@@ -46,7 +46,9 @@ function annotateLine(line: ExpressiveCodeLine) {
 		// Colors expressed with explicit color syntax.
 		...line.text.matchAll(colors.programmatic),
 		// Colors expressed with a named keyword, e.g. “blue” or “Canvas”.
-		...line.text.matchAll(colors.named).filter((match) => !commentPositions.includes(match.index)),
+		...[...line.text.matchAll(colors.named)].filter(
+			(match) => !commentPositions.includes(match.index)
+		),
 	]
 		// Sort matches in reverse order by start position in the line (i.e. last match first).
 		.sort((a, b) => b.index - a.index)
