@@ -39,12 +39,9 @@ const commentRegEx = /(?:^[^*]*\*\/)?\/\*[^*]*(?:\*\/)?/gi;
  */
 function annotateLine(line: ExpressiveCodeLine) {
 	/** An array of character positions that are inside comments. */
-	const commentPositions = [
-		...line.text
-			.matchAll(commentRegEx)
-			// Convert a match to an array of indexes for each character in that range.
-			.flatMap((match) => Array.from(match[0]).map((_, i) => match.index + i)),
-	];
+	const commentPositions = [...line.text.matchAll(commentRegEx)]
+		// Convert each match to an array of indexes for characters in that range.
+		.flatMap((match) => Array.from(match[0]).map((_, i) => match.index + i));
 	[
 		// Colors expressed with explicit color syntax.
 		...line.text.matchAll(colors.programmatic),
