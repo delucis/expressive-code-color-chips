@@ -16,6 +16,15 @@ export default defineConfig({
 			},
 			sidebar: ['getting-started', 'configuration'],
 			customCss: ['./src/styles.css'],
+			head: [
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image',
+						content: 'https://delucis.github.io/expressive-code-color-chips/og.png',
+					},
+				},
+			],
 		}),
 	],
 });
