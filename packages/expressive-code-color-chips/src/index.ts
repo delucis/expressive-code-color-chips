@@ -7,7 +7,7 @@ import {
 	PluginStyleSettings,
 } from '@expressive-code/core';
 import { h } from '@expressive-code/core/hast';
-import { colorRegEx } from './colorRegEx';
+import { colors } from './colorRegEx';
 
 const chipClass = 'ec-css-color-chip';
 const localColorVariable = '--ec-css-color-chip';
@@ -31,22 +31,40 @@ class CssColorAnnotation extends ExpressiveCodeAnnotation {
 	}
 }
 
+/** Match all CSS comments in a line, including trailing unclosed comments or leading comments. */
+const commentRegEx = /(?:^[^*]*\*\/)?\/\*[^*]*(?:\*\/)?/gi;
+
 /**
  * Process a code block line and annotate any colors found.
  */
 function annotateLine(line: ExpressiveCodeLine) {
-	const matches = [...line.text.matchAll(colorRegEx)];
-	matches.reverse().forEach((match) => {
-		const color = match[0];
-		const columnStart = match.index;
-		const columnEnd = columnStart + color.length;
-		line.addAnnotation(
-			new CssColorAnnotation({
-				color,
-				inlineRange: { columnStart, columnEnd },
-			})
-		);
-	});
+	/** An array of character positions that are inside comments. */
+	const commentPositions = [
+		...line.text
+			.matchAll(commentRegEx)
+			// Convert a match to an array of indexes for each character in that range.
+			.flatMap((match) => Array.from(match[0]).map((_, i) => match.index + i)),
+	];
+	[
+		// Colors expressed with explicit color syntax.
+		...line.text.matchAll(colors.programmatic),
+		// Colors expressed with a named keyword, e.g. “blue” or “Canvas”.
+		...line.text.matchAll(colors.named).filter((match) => !commentPositions.includes(match.index)),
+	]
+		// Sort matches in reverse order by start position in the line (i.e. last match first).
+		.sort((a, b) => b.index - a.index)
+		// Annotate each match.
+		.forEach((match) => {
+			const color = match[0];
+			const columnStart = match.index;
+			const columnEnd = columnStart + color.length;
+			line.addAnnotation(
+				new CssColorAnnotation({
+					color,
+					inlineRange: { columnStart, columnEnd },
+				})
+			);
+		});
 }
 
 /**
