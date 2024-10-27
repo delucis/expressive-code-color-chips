@@ -14,6 +14,8 @@
 	},
 	"scripts": {
 		"build": "pnpm -F expressive-code-color-chips build",
-		"build:docs": "pnpm -F @expressive-code-color-chips/docs build"
+		"build:docs": "pnpm -F @expressive-code-color-chips/docs build",
+		"ci-version": "changeset version && pnpm install --no-frozen-lockfile",
+		"ci-publish": "pnpm build && changeset publish"
 	}
 }
