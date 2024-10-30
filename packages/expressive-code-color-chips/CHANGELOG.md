@@ -1,5 +1,11 @@
 # expressive-code-color-chips
 
+## 0.1.2
+
+### Patch Changes
+
+- [`75369fd`](https://github.com/delucis/expressive-code-color-chips/commit/75369fda4077abf4dff9a25d49adad443ccd320e) Thanks [@delucis](https://github.com/delucis)! - Updates `package.json` metadata
+
 ## 0.1.1
 
 ### Patch Changes
