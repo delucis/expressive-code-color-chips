@@ -1,10 +1,11 @@
 {
 	"name": "expressive-code-color-chips",
-	"description": "CSS color preview plugin for Expressive Code. Display a small sample of each CSS color in your code examples.",
+	"description": "CSS color preview plugin for Expressive Code. Display a small sample of each CSS color in your syntax highlighted code examples.",
 	"version": "0.1.1",
 	"keywords": [
 		"expressive-code",
-		"withastro"
+		"withastro",
+		"syntax-highlighting"
 	],
 	"author": "Chris Swithinbank <swithinbank@gmail.com>",
 	"homepage": "https://delucis.github.io/expressive-code-color-chips/",
