@@ -26,10 +26,10 @@ importers:
         version: 0.9.4(typescript@5.6.3)
       '@astrojs/starlight':
         specifier: ^0.28.3
-        version: 0.28.3(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))
+        version: 0.28.3(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))
       astro:
-        specifier: ^4.16.17
-        version: 4.16.17(rollup@4.24.1)(typescript@5.6.3)
+        specifier: ^4.16.18
+        version: 4.16.18(rollup@4.24.1)(typescript@5.6.3)
       expressive-code-color-chips:
         specifier: '*'
         version: link:../packages/expressive-code-color-chips
@@ -38,7 +38,7 @@ importers:
         version: 0.32.6
       starlight-package-managers:
         specifier: ^0.7.0
-        version: 0.7.0(@astrojs/starlight@0.28.3(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3)))(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))
+        version: 0.7.0(@astrojs/starlight@0.28.3(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3)))(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -1026,8 +1026,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^3.3.0
 
-  astro@4.16.17:
-    resolution: {integrity: sha512-OuD+BP7U6OqQLKtZ/FJkU2S+TOlifxS/OKUbZOb5p6y+LLBa1J3zHRJrIl7DUSq6eXY+9wSWwbJpD9JS+lqhxA==}
+  astro@4.16.18:
+    resolution: {integrity: sha512-G7zfwJt9BDHEZwlaLNvjbInIw2hPryyD654314KV/XT34pJU6SfN1S+mWa8RAkALcZNJnJXCJmT3JXLQStD3Lw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3021,12 +3021,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.8(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))':
+  '@astrojs/mdx@3.1.8(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))':
     dependencies:
       '@astrojs/markdown-remark': 5.3.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 4.16.17(rollup@4.24.1)(typescript@5.6.3)
+      astro: 4.16.18(rollup@4.24.1)(typescript@5.6.3)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       gray-matter: 4.0.3
@@ -3051,15 +3051,15 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.28.3(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))':
+  '@astrojs/starlight@0.28.3(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))':
     dependencies:
-      '@astrojs/mdx': 3.1.8(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))
+      '@astrojs/mdx': 3.1.8(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))
       '@astrojs/sitemap': 3.2.1
       '@pagefind/default-ui': 1.1.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      astro: 4.16.17(rollup@4.24.1)(typescript@5.6.3)
-      astro-expressive-code: 0.35.6(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))
+      astro: 4.16.18(rollup@4.24.1)(typescript@5.6.3)
+      astro-expressive-code: 0.35.6(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.3
@@ -4015,12 +4015,12 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.35.6(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3)):
+  astro-expressive-code@0.35.6(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3)):
     dependencies:
-      astro: 4.16.17(rollup@4.24.1)(typescript@5.6.3)
+      astro: 4.16.18(rollup@4.24.1)(typescript@5.6.3)
       rehype-expressive-code: 0.35.6
 
-  astro@4.16.17(rollup@4.24.1)(typescript@5.6.3):
+  astro@4.16.18(rollup@4.24.1)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -6028,10 +6028,10 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.7.0(@astrojs/starlight@0.28.3(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3)))(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3)):
+  starlight-package-managers@0.7.0(@astrojs/starlight@0.28.3(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3)))(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3)):
     dependencies:
-      '@astrojs/starlight': 0.28.3(astro@4.16.17(rollup@4.24.1)(typescript@5.6.3))
-      astro: 4.16.17(rollup@4.24.1)(typescript@5.6.3)
+      '@astrojs/starlight': 0.28.3(astro@4.16.18(rollup@4.24.1)(typescript@5.6.3))
+      astro: 4.16.18(rollup@4.24.1)(typescript@5.6.3)
 
   stdin-discarder@0.2.2: {}
 
