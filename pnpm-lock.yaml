@@ -37,8 +37,8 @@ importers:
         specifier: ^0.34.4
         version: 0.34.4
       starlight-package-managers:
-        specifier: ^0.7.0
-        version: 0.7.0(@astrojs/starlight@0.28.3(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3)))(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3))
+        specifier: ^0.11.0
+        version: 0.11.0(@astrojs/starlight@0.28.3(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3)))
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -2478,12 +2478,11 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  starlight-package-managers@0.7.0:
-    resolution: {integrity: sha512-7T0Wd4OhtyTxr7yxplO1gt1B0Ped4dxRQ0T3uOp7qM+5UmQiyQE6PMxwmN+4hVuaVQ1zpDdZR6nQrptewS+m9g==}
-    engines: {node: '>=18.14.1'}
+  starlight-package-managers@0.11.0:
+    resolution: {integrity: sha512-ItOgeF4YYI4lKaeqGBuRBNsmPTXQv16Pc7U+hzkvJoR9HzOxhk2wSNkRzxSnqX5OZmmsAwDy49NYqpFyzkO8Bw==}
+    engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.22.0'
-      astro: '>=4.2.7'
 
   stdin-discarder@0.2.2:
     resolution: {integrity: sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==}
@@ -5972,10 +5971,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.7.0(@astrojs/starlight@0.28.3(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3)))(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3)):
+  starlight-package-managers@0.11.0(@astrojs/starlight@0.28.3(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3))):
     dependencies:
       '@astrojs/starlight': 0.28.3(astro@4.16.19(rollup@4.46.3)(typescript@5.6.3))
-      astro: 4.16.19(rollup@4.46.3)(typescript@5.6.3)
 
   stdin-discarder@0.2.2: {}
 
