@@ -37,8 +37,8 @@ importers:
         specifier: ^0.34.4
         version: 0.34.4
       starlight-package-managers:
-        specifier: ^0.11.0
-        version: 0.11.0(@astrojs/starlight@0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)))
+        specifier: ^0.11.1
+        version: 0.11.1(@astrojs/starlight@0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -2131,8 +2131,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  starlight-package-managers@0.11.0:
-    resolution: {integrity: sha512-ItOgeF4YYI4lKaeqGBuRBNsmPTXQv16Pc7U+hzkvJoR9HzOxhk2wSNkRzxSnqX5OZmmsAwDy49NYqpFyzkO8Bw==}
+  starlight-package-managers@0.11.1:
+    resolution: {integrity: sha512-GDGJAozmBvmo8CVrOTnYTtnFO1C0kvMPorQ7CF9Khqt2O5mdRtE9JFj+MYh8hU78TdacXFGlJNJDMfHFl7jxiw==}
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.22.0'
@@ -5391,7 +5391,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.11.0(@astrojs/starlight@0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))):
+  starlight-package-managers@0.11.1(@astrojs/starlight@0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))):
     dependencies:
       '@astrojs/starlight': 0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
 
