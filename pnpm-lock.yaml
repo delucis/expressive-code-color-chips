@@ -28,7 +28,7 @@ importers:
         specifier: ^0.36.1
         version: 0.36.1(astro@5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
       astro:
-        specifier: ^5.14.5
+        specifier: ^5.14.6
         version: 5.14.6(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
       expressive-code-color-chips:
         specifier: '*'
@@ -2099,6 +2099,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   slash@3.0.0:
