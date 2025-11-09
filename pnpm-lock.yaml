@@ -26,10 +26,10 @@ importers:
         version: 0.9.5(typescript@5.9.3)
       '@astrojs/starlight':
         specifier: ^0.36.2
-        version: 0.36.2(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
+        version: 0.36.2(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
       astro:
-        specifier: ^5.15.3
-        version: 5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
+        specifier: ^5.15.4
+        version: 5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
       expressive-code-color-chips:
         specifier: '*'
         version: link:../packages/expressive-code-color-chips
@@ -38,7 +38,7 @@ importers:
         version: 0.34.4
       starlight-package-managers:
         specifier: ^0.11.1
-        version: 0.11.1(@astrojs/starlight@0.36.2(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)))
+        version: 0.11.1(@astrojs/starlight@0.36.2(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -880,8 +880,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro@5.15.3:
-    resolution: {integrity: sha512-wUO/isJrcUoduRoKacKB9jpO6TxTlPV1zw8UqQx39jSNY7z9IxusJAiib3AiNvqK+dCWhqXx+OnExCCwELmcUw==}
+  astro@5.15.4:
+    resolution: {integrity: sha512-0g/68hLHEJZF2nYUcZM5O0kOnzCsCIf8eA9+0jfBAxp4ycujrIHRgIOdZCFKL9GoTsn8AypWbziypH5aEIF+aA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2722,12 +2722,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.7(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.3.7(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
+      astro: 5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2751,17 +2751,17 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.36.2(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))':
+  '@astrojs/starlight@0.36.2(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
-      '@astrojs/mdx': 4.3.7(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
+      '@astrojs/mdx': 4.3.7(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
       '@astrojs/sitemap': 3.6.0
       '@pagefind/default-ui': 1.4.0
       '@types/hast': 3.0.4
       '@types/js-yaml': 4.0.9
       '@types/mdast': 4.0.4
-      astro: 5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
-      astro-expressive-code: 0.41.3(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
+      astro: 5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
+      astro-expressive-code: 0.41.3(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.3
@@ -3569,12 +3569,12 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.41.3(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)):
+  astro-expressive-code@0.41.3(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)):
     dependencies:
-      astro: 5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
+      astro: 5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0)
       rehype-expressive-code: 0.41.3
 
-  astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0):
+  astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.4
@@ -5392,9 +5392,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.11.1(@astrojs/starlight@0.36.2(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))):
+  starlight-package-managers@0.11.1(@astrojs/starlight@0.36.2(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))):
     dependencies:
-      '@astrojs/starlight': 0.36.2(astro@5.15.3(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
+      '@astrojs/starlight': 0.36.2(astro@5.15.4(rollup@4.46.3)(typescript@5.9.3)(yaml@2.6.0))
 
   stream-replace-string@2.0.0: {}
 
