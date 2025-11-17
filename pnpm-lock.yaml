@@ -28,7 +28,7 @@ importers:
         specifier: ^0.36.2
         version: 0.36.2(astro@5.15.6(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.6.0))
       astro:
-        specifier: ^5.15.5
+        specifier: ^5.15.6
         version: 5.15.6(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.6.0)
       expressive-code-color-chips:
         specifier: '*'
