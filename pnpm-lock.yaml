@@ -25,8 +25,8 @@ importers:
         specifier: ^0.9.5
         version: 0.9.5(typescript@5.9.3)
       '@astrojs/starlight':
-        specifier: ^0.36.2
-        version: 0.36.2(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))
+        specifier: ^0.36.3
+        version: 0.36.3(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))
       astro:
         specifier: ^5.16.0
         version: 5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0)
@@ -38,7 +38,7 @@ importers:
         version: 0.34.5
       starlight-package-managers:
         specifier: ^0.11.1
-        version: 0.11.1(@astrojs/starlight@0.36.2(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0)))
+        version: 0.11.1(@astrojs/starlight@0.36.3(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0)))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -97,8 +97,8 @@ packages:
   '@astrojs/sitemap@3.6.0':
     resolution: {integrity: sha512-4aHkvcOZBWJigRmMIAJwRQXBS+ayoP5z40OklTXYXhUDhwusz+DyDl+nSshY6y9DvkVEavwNcFO8FD81iGhXjg==}
 
-  '@astrojs/starlight@0.36.2':
-    resolution: {integrity: sha512-QR8NfO7+7DR13kBikhQwAj3IAoptLLNs9DkyKko2M2l3PrqpcpVUnw1JBJ0msGDIwE6tBbua2UeBND48mkh03w==}
+  '@astrojs/starlight@0.36.3':
+    resolution: {integrity: sha512-5cm4QVQHUP6ZE52O43TtUpsTvLKdZa9XEs4l3suzuY7Ymsbz4ojtoL9NhistbMqM+/qk6fm6SmxbOL6hQ/LfNA==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -3000,7 +3000,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.36.2(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))':
+  '@astrojs/starlight@0.36.3(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.9
       '@astrojs/mdx': 4.3.7(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))
@@ -5810,9 +5810,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.11.1(@astrojs/starlight@0.36.2(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))):
+  starlight-package-managers@0.11.1(@astrojs/starlight@0.36.3(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))):
     dependencies:
-      '@astrojs/starlight': 0.36.2(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))
+      '@astrojs/starlight': 0.36.3(astro@5.16.0(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.6.0))
 
   stream-replace-string@2.0.0: {}
 
