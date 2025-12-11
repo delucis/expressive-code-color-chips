@@ -35,6 +35,6 @@
 		"@expressive-code/core": "^0.41.3"
 	},
 	"peerDependencies": {
-		"@expressive-code/core": "^0.37.1"
+		"@expressive-code/core": ">=0.37.1"
 	}
 }
