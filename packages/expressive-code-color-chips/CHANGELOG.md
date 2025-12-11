@@ -1,5 +1,11 @@
 # expressive-code-color-chips
 
+## 0.1.4
+
+### Patch Changes
+
+- [#72](https://github.com/delucis/expressive-code-color-chips/pull/72) [`96730ba`](https://github.com/delucis/expressive-code-color-chips/commit/96730bac787dab8dbfaa9ccac43c806134a4ce1b) Thanks [@delucis](https://github.com/delucis)! - Reduces package size by almost 50% by not shipping source maps
+
 ## 0.1.3
 
 ### Patch Changes
