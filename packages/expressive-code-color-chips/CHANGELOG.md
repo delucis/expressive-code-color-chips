@@ -1,5 +1,13 @@
 # expressive-code-color-chips
 
+## 0.1.3
+
+### Patch Changes
+
+- [`a244ce7`](https://github.com/delucis/expressive-code-color-chips/commit/a244ce7aa9bcaeba7502804336c987561fd8395d) Thanks [@delucis](https://github.com/delucis)! - This is the first release published using trusted publishing
+
+- [`2569d42`](https://github.com/delucis/expressive-code-color-chips/commit/2569d427316d5307911b27f781c76f8240a4c007) Thanks [@delucis](https://github.com/delucis)! - Allows this plugin to be used with newer versions of Expressive Code (0.38 and up)
+
 ## 0.1.2
 
 ### Patch Changes
