@@ -25,10 +25,10 @@ importers:
         specifier: ^0.9.6
         version: 0.9.6(prettier@3.7.2)(typescript@5.9.3)
       '@astrojs/starlight':
-        specifier: ^0.37.4
+        specifier: ^0.37.5
         version: 0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
       astro:
-        specifier: ^5.17.0
+        specifier: ^5.17.1
         version: 5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1)
       expressive-code-color-chips:
         specifier: '*'
