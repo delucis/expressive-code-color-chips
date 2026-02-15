@@ -25,8 +25,8 @@ importers:
         specifier: ^0.9.6
         version: 0.9.6(prettier@3.7.2)(typescript@5.9.3)
       '@astrojs/starlight':
-        specifier: ^0.37.5
-        version: 0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
+        specifier: ^0.37.6
+        version: 0.37.6(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1)
@@ -38,7 +38,7 @@ importers:
         version: 0.34.5
       starlight-package-managers:
         specifier: ^0.12.0
-        version: 0.12.0(@astrojs/starlight@0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1)))
+        version: 0.12.0(@astrojs/starlight@0.37.6(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1)))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -97,8 +97,8 @@ packages:
   '@astrojs/sitemap@3.6.0':
     resolution: {integrity: sha512-4aHkvcOZBWJigRmMIAJwRQXBS+ayoP5z40OklTXYXhUDhwusz+DyDl+nSshY6y9DvkVEavwNcFO8FD81iGhXjg==}
 
-  '@astrojs/starlight@0.37.5':
-    resolution: {integrity: sha512-+pC2pgy0iR9Ucl1P4CE0jyfsoNKcUSB2RIoBwm4UnyyhtlaEjoSU7MZwa5IJkzS9sBgIbLbLgYVbkC4tHN8rkQ==}
+  '@astrojs/starlight@0.37.6':
+    resolution: {integrity: sha512-wQrKwH431q+8FsLBnNQeG+R36TMtEGxTQ2AuiVpcx9APcazvL3n7wVW8mMmYyxX0POjTnxlcWPkdMGR3Yj1L+w==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -1526,6 +1526,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globby@11.1.0:
@@ -3007,7 +3008,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))':
+  '@astrojs/starlight@0.37.6(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.10
       '@astrojs/mdx': 4.3.7(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
@@ -5801,9 +5802,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-package-managers@0.12.0(@astrojs/starlight@0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))):
+  starlight-package-managers@0.12.0(@astrojs/starlight@0.37.6(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))):
     dependencies:
-      '@astrojs/starlight': 0.37.5(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
+      '@astrojs/starlight': 0.37.6(astro@5.17.1(@types/node@24.10.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.7.1))
 
   stream-replace-string@2.0.0: {}
 
