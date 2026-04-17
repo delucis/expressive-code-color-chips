@@ -28,7 +28,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup ./src/index.ts --format esm --dts --clean",
+		"build": "tsdown ./src/index.ts --no-fixed-extension",
 		"watch": "pnpm build --watch src"
 	},
 	"devDependencies": {

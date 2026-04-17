@@ -3,7 +3,6 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"declaration": true,
-		"declarationMap": true,
 		"emitDeclarationOnly": true,
 		"esModuleInterop": true,
 		"exactOptionalPropertyTypes": true,
@@ -13,10 +12,6 @@
 		"strict": true,
 		"target": "ESNext",
 		"rootDir": "./src",
-		"outDir": "./dist",
-
-		// tsup sets baseUrl which is deprecated, so we need this
-		// TODO: migrate to tsdown
-		"ignoreDeprecations": "6.0"
+		"outDir": "./dist"
 	}
 }
