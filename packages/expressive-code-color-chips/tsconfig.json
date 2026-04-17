@@ -11,9 +11,12 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"moduleResolution": "node",
-		"module": "ESNext",
 		"target": "ESNext",
-		"outDir": "./dist"
+		"rootDir": "./src",
+		"outDir": "./dist",
+
+		// tsup sets baseUrl which is deprecated, so we need this
+		// TODO: migrate to tsdown
+		"ignoreDeprecations": "6.0"
 	}
 }
