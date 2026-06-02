@@ -32,7 +32,7 @@ importers:
         version: 6.3.7(@types/node@24.10.1)(rollup@4.53.3)(yaml@2.8.3)
       expressive-code-color-chips:
         specifier: '*'
-        version: 0.1.4(@expressive-code/core@0.42.0)
+        version: link:../packages/expressive-code-color-chips
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -1376,11 +1376,6 @@ packages:
 
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
-
-  expressive-code-color-chips@0.1.4:
-    resolution: {integrity: sha512-PlPrVtlf3hD/O2SaWzYBRk9Gy2Z0gjIl4uYrGH89zZJyj8BGoWMh08XuQZ6lDWy3dvpuQ5R2oYLb3yhhRo+Aqg==}
-    peerDependencies:
-      '@expressive-code/core': '>=0.37.1'
 
   expressive-code@0.42.0:
     resolution: {integrity: sha512-V5DtJLEKuj4wf9O6IRtPtRObkMVy2ggR+S0MdjrTw6m58krZnDioyhW1si3Y04c5YPeooP4nd85Yq9NwEVHS4g==}
@@ -4158,10 +4153,6 @@ snapshots:
       '@types/estree': 1.0.8
 
   eventemitter3@5.0.1: {}
-
-  expressive-code-color-chips@0.1.4(@expressive-code/core@0.42.0):
-    dependencies:
-      '@expressive-code/core': 0.42.0
 
   expressive-code@0.42.0:
     dependencies:
