@@ -5,7 +5,19 @@ description: Optional configuration for the Expressive Code Color Chips plugin, 
 
 After adding the Color Chips plugin to your Expressive Code config as shown in [the set-up guide](/expressive-code-color-chips/getting-started/), no further configuration is required.
 
-If you want to customize the appearance of the color chips, you can use style overrides.
+If you want to customize the behaviour of the plugin, you can pass options to `pluginColorChips()` and use Expressive Code’s style overrides.
+
+## Additional languages
+
+By default, the plugin annotates colors in `css`, `scss`, `sass`, `less`, and `stylus` code blocks. Use the `languages` option to control which languages get color chips, for example to enable them for another language that includes color values.
+
+```js
+{
+	plugins: [pluginColorChips({ languages: ['css', 'json'] })],
+},
+```
+
+The value you provide replaces the defaults, so include any of the built-in CSS dialects you still want to annotate.
 
 ## Styling
 
