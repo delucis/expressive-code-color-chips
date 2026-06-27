@@ -1,5 +1,11 @@
 # expressive-code-color-chips
 
+## 0.2.0
+
+### Minor Changes
+
+- [#151](https://github.com/delucis/expressive-code-color-chips/pull/151) [`d602bb9`](https://github.com/delucis/expressive-code-color-chips/commit/d602bb9042fe42b304ca6b59f94a899075a856f9) Thanks [@ewels](https://github.com/ewels)! - Adds a `languages` option to `pluginColorChips()` to control which languages get color chips. The value you provide replaces the built-in CSS dialects, for example: `pluginColorChips({ languages: ['css', 'json'] })`.
+
 ## 0.1.4
 
 ### Patch Changes
