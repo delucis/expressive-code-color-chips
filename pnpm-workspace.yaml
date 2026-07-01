@@ -7,4 +7,3 @@ linkWorkspacePackages: true
 
 allowBuilds:
   esbuild: false
-  sharp: false
