@@ -16,7 +16,7 @@ importers:
         version: 2.31.0(@types/node@24.10.1)
     devDependencies:
       tsdown:
-        specifier: ^0.22.4
+        specifier: ^0.22.5
         version: 0.22.7(typescript@6.0.3)
 
   docs:
