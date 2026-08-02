@@ -11,9 +11,9 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.9",
-		"@astrojs/starlight": "^0.41.3",
-		"astro": "^7.0.7",
+		"@astrojs/check": "^0.9.10",
+		"@astrojs/starlight": "^0.41.5",
+		"astro": "^7.1.6",
 		"expressive-code-color-chips": "*",
 		"sharp": "^0.35.3",
 		"starlight-package-managers": "^0.12.0",
