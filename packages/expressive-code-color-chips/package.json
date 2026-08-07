@@ -29,6 +29,7 @@
 	],
 	"scripts": {
 		"build": "tsdown ./src/index.ts --no-fixed-extension",
+		"test": "tsdown ./src/index.ts --no-fixed-extension && node --test test/*.test.mjs",
 		"watch": "pnpm build --watch src"
 	},
 	"devDependencies": {
