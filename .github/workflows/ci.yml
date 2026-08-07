@@ -19,5 +19,6 @@ jobs:
           node-version: 24.18.0
           cache: pnpm
       - run: pnpm i
+      - run: pnpm test
       - run: pnpm build
       - run: pnpm build:docs
