@@ -4,7 +4,7 @@
 	"private": true,
 	"author": "delucis",
 	"license": "MIT",
-	"packageManager": "pnpm@11.18.0",
+	"packageManager": "pnpm@11.21.0",
 	"devDependencies": {
 		"tsdown": "^0.22.14"
 	},
