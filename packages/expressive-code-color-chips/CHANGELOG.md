@@ -1,5 +1,11 @@
 # expressive-code-color-chips
 
+## 0.2.1
+
+### Patch Changes
+
+- [#176](https://github.com/delucis/expressive-code-color-chips/pull/176) [`581a653`](https://github.com/delucis/expressive-code-color-chips/commit/581a65372daf593f336ccb11ee58ba1188f3edf9) Thanks [@pinin4fjords](https://github.com/pinin4fjords)! - Avoids rendering color chips for named colors when the color name appears inside a longer identifier
+
 ## 0.2.0
 
 ### Minor Changes

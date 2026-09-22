@@ -1,7 +1,7 @@
 {
 	"name": "expressive-code-color-chips",
 	"description": "CSS color preview plugin for Expressive Code. Display a small sample of each CSS color in your syntax highlighted code examples.",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"keywords": [
 		"expressive-code",
 		"withastro",
@@ -29,11 +29,12 @@
 	],
 	"scripts": {
 		"build": "tsdown ./src/index.ts --no-fixed-extension",
-		"test": "tsdown ./src/index.ts --no-fixed-extension && node --test test/*.test.mjs",
+		"pretest": "pnpm build",
+		"test": "node --test test/*.test.mjs",
 		"watch": "pnpm build --watch src"
 	},
 	"devDependencies": {
-		"@expressive-code/core": "^0.44.1"
+		"@expressive-code/core": "^0.44.2"
 	},
 	"peerDependencies": {
 		"@expressive-code/core": ">=0.37.1"
