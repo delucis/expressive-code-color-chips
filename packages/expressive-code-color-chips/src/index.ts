@@ -47,7 +47,7 @@ function annotateLine(line: ExpressiveCodeLine) {
 		...line.text.matchAll(colors.programmatic),
 		// Colors expressed with a named keyword, e.g. “blue” or “Canvas”.
 		...[...line.text.matchAll(colors.named)].filter(
-			(match) => !commentPositions.includes(match.index),
+			(match) => !commentPositions.includes(match.index)
 		),
 	]
 		// Sort matches in reverse order by start position in the line (i.e. last match first).
@@ -61,7 +61,7 @@ function annotateLine(line: ExpressiveCodeLine) {
 				new CssColorAnnotation({
 					color,
 					inlineRange: { columnStart, columnEnd },
-				}),
+				})
 			);
 		});
 }
