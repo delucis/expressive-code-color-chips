@@ -2,4 +2,4 @@
 'expressive-code-color-chips': patch
 ---
 
-Avoid rendering named color chips for substrings inside identifiers.
+Avoids rendering color chips for named colors when the color name appears inside a longer identifier
