@@ -1,9 +1,14 @@
+// @ts-check
 import assert from 'node:assert/strict';
 import { describe, test } from 'node:test';
 import { ExpressiveCodeEngine } from '@expressive-code/core';
 import { toHtml } from '@expressive-code/core/hast';
 import { pluginColorChips } from '../dist/index.js';
 
+/**
+ * @param {string} code
+ * @returns {Promise<string>}
+ */
 async function render(code) {
 	const engine = new ExpressiveCodeEngine({
 		plugins: [pluginColorChips({ languages: ['metro'] })],
@@ -12,6 +17,10 @@ async function render(code) {
 	return toHtml(result.renderedGroupAst);
 }
 
+/**
+ * @param {string} html
+ * @returns {number}
+ */
 function countChips(html) {
 	return html.match(/class="ec-css-color-chip"/g)?.length ?? 0;
 }
@@ -33,7 +42,7 @@ describe('named colors', () => {
 
 	test('continues to annotate other color syntaxes beside identifiers', async () => {
 		const html = await render(
-			'%%metro line: star_salmon | Aligner: STAR, Quantification: RSEM | #2db572'
+			'%%metro line: star_salmon | Aligner: STAR, Quantification: RSEM | #2db572',
 		);
 
 		assert.equal(countChips(html), 1);
