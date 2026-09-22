@@ -34,18 +34,6 @@ class CssColorAnnotation extends ExpressiveCodeAnnotation {
 /** Match all CSS comments in a line, including trailing unclosed comments or leading comments. */
 const commentRegEx = /(?:^[^*]*\*\/)?\/\*[^*]*(?:\*\/)?/gi;
 
-/** Characters that can continue a CSS identifier. */
-const cssIdentifierCharacterRegEx = /^[-_a-zA-Z0-9\\\u00A0-\uFFFF]$/;
-
-function isStandaloneNamedColor(match: RegExpMatchArray, line: string) {
-	const start = match.index;
-	const end = start + match[0].length;
-	return (
-		!cssIdentifierCharacterRegEx.test(line[start - 1] ?? '') &&
-		!cssIdentifierCharacterRegEx.test(line[end] ?? '')
-	);
-}
-
 /**
  * Process a code block line and annotate any colors found.
  */
@@ -59,9 +47,7 @@ function annotateLine(line: ExpressiveCodeLine) {
 		...line.text.matchAll(colors.programmatic),
 		// Colors expressed with a named keyword, e.g. “blue” or “Canvas”.
 		...[...line.text.matchAll(colors.named)].filter(
-			(match) =>
-				!commentPositions.includes(match.index) &&
-				isStandaloneNamedColor(match, line.text)
+			(match) => !commentPositions.includes(match.index),
 		),
 	]
 		// Sort matches in reverse order by start position in the line (i.e. last match first).
@@ -75,7 +61,7 @@ function annotateLine(line: ExpressiveCodeLine) {
 				new CssColorAnnotation({
 					color,
 					inlineRange: { columnStart, columnEnd },
-				})
+				}),
 			);
 		});
 }
