@@ -19,6 +19,23 @@ By default, the plugin annotates colors in `css`, `scss`, `sass`, `less`, and `s
 
 The value you provide replaces the defaults, so include any of the built-in CSS dialects you still want to annotate.
 
+## Suppressing individual chips
+
+Set `escapeMarker` to enable an opt-in marker that suppresses individual color chips. For example, you can use a backslash:
+
+```js
+{
+	plugins: [pluginColorChips({ escapeMarker: '\\' })],
+},
+```
+
+With this configuration, writing `\#2db572` or `\salmon` in a code block renders and copies as `#2db572` or `salmon`, without a color chip. The marker is only removed when it immediately precedes a recognized color. Backslashes elsewhere in the code are unchanged.
+
+```css
+.with-preview { color: #0570b0; }
+.without-preview { color: \#2db572; }
+```
+
 ## Styling
 
 You can provide custom styles in your Expressive Code config using the `styleOverrides.colorChips` object.
