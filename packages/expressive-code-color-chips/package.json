@@ -29,6 +29,8 @@
 	],
 	"scripts": {
 		"build": "tsdown ./src/index.ts --no-fixed-extension",
+		"pretest": "pnpm build",
+		"test": "node --test test/*.test.mjs",
 		"watch": "pnpm build --watch src"
 	},
 	"devDependencies": {
