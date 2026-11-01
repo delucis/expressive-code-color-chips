@@ -34,7 +34,7 @@
 		"watch": "pnpm build --watch src"
 	},
 	"devDependencies": {
-		"@expressive-code/core": "^0.44.2"
+		"@expressive-code/core": "^0.44.3"
 	},
 	"peerDependencies": {
 		"@expressive-code/core": ">=0.37.1"
