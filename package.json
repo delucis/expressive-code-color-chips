@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"packageManager": "pnpm@11.28.9",
 	"devDependencies": {
-		"tsdown": "^0.23.1"
+		"tsdown": "^0.23.3"
 	},
 	"dependencies": {
 		"@changesets/changelog-github": "^1.0.1",
