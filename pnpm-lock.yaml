@@ -16,7 +16,7 @@ importers:
         version: 3.0.3
     devDependencies:
       tsdown:
-        specifier: ^0.23.3
+        specifier: ^0.23.4
         version: 0.23.4(@volar/typescript@2.4.28(typescript@6.0.3))(typescript@6.0.3)
 
   docs:
