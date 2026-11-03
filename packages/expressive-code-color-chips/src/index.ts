@@ -34,22 +34,26 @@ class CssColorAnnotation extends ExpressiveCodeAnnotation {
 /** Match all CSS comments in a line, including trailing unclosed comments or leading comments. */
 const commentRegEx = /(?:^[^*]*\*\/)?\/\*[^*]*(?:\*\/)?/gi;
 
-/**
- * Process a code block line and annotate any colors found.
- */
-function annotateLine(line: ExpressiveCodeLine) {
+/** Return every color that the plugin would annotate in a line. */
+function findColors(line: ExpressiveCodeLine) {
 	/** An array of character positions that are inside comments. */
 	const commentPositions = [...line.text.matchAll(commentRegEx)]
 		// Convert each match to an array of indexes for characters in that range.
 		.flatMap((match) => Array.from(match[0]).map((_, i) => match.index + i));
-	[
+	return [
 		// Colors expressed with explicit color syntax.
 		...line.text.matchAll(colors.programmatic),
 		// Colors expressed with a named keyword, e.g. “blue” or “Canvas”.
 		...[...line.text.matchAll(colors.named)].filter(
 			(match) => !commentPositions.includes(match.index)
 		),
-	]
+	];
+}
+
+/** Process a code block line and annotate colors outside the excluded positions. */
+function annotateLineExcept(line: ExpressiveCodeLine, excludedPositions: Set<number>) {
+	findColors(line)
+		.filter((match) => !excludedPositions.has(match.index))
 		// Sort matches in reverse order by start position in the line (i.e. last match first).
 		.sort((a, b) => b.index - a.index)
 		// Annotate each match.
@@ -64,6 +68,23 @@ function annotateLine(line: ExpressiveCodeLine) {
 				})
 			);
 		});
+}
+
+/** Remove escape markers before colors and return their adjusted start positions. */
+function removeColorEscapes(line: ExpressiveCodeLine, escapeMarker: string) {
+	const escapedMatches = findColors(line)
+		.filter(
+			(match) =>
+				line.text.slice(match.index - escapeMarker.length, match.index) === escapeMarker
+		)
+		.sort((a, b) => a.index - b.index);
+	const excludedPositions = new Set(
+		escapedMatches.map((match, index) => match.index - escapeMarker.length * (index + 1))
+	);
+	escapedMatches.reverse().forEach((match) => {
+		line.editText(match.index - escapeMarker.length, match.index, '');
+	});
+	return excludedPositions;
 }
 
 /** Configuration options for the Color Chips plugin. */
@@ -83,19 +104,52 @@ export interface PluginColorChipsOptions {
 	 * @default ['css', 'scss', 'sass', 'less', 'stylus']
 	 */
 	languages?: string[];
+	/**
+	 * An optional marker for suppressing individual color chips.
+	 *
+	 * The marker is removed from rendered and copied code when it immediately
+	 * precedes a recognized color. The color itself remains visible but is not
+	 * annotated.
+	 *
+	 * ```js
+	 * pluginColorChips({ escapeMarker: '\\' })
+	 * ```
+	 *
+	 * With this configuration, `\#2db572` renders as `#2db572` without a chip.
+	 *
+	 * @default undefined
+	 */
+	escapeMarker?: string;
 }
 
 /**
  * Expressive Code plugin that adds a small preview of each CSS color in your code examples.
  */
-export function pluginColorChips({ languages = cssDialects }: PluginColorChipsOptions = {}) {
+export function pluginColorChips({
+	languages = cssDialects,
+	escapeMarker,
+}: PluginColorChipsOptions = {}) {
+	if (escapeMarker === '') {
+		throw new Error('The Color Chips escape marker cannot be empty.');
+	}
 	const enabledLanguages = new Set(languages);
+	const excludedPositions = new WeakMap<ExpressiveCodeLine, Set<number>>();
 	return definePlugin({
 		name: 'ColorChips',
 		hooks: {
+			preprocessCode({ codeBlock }) {
+				if (escapeMarker && enabledLanguages.has(codeBlock.language)) {
+					codeBlock.getLines().forEach((line) => {
+						const positions = removeColorEscapes(line, escapeMarker);
+						if (positions.size > 0) excludedPositions.set(line, positions);
+					});
+				}
+			},
 			postprocessAnalyzedCode({ codeBlock }) {
 				if (enabledLanguages.has(codeBlock.language)) {
-					codeBlock.getLines().forEach((line) => annotateLine(line));
+					codeBlock
+						.getLines()
+						.forEach((line) => annotateLineExcept(line, excludedPositions.get(line) ?? new Set()));
 				}
 			},
 		},
